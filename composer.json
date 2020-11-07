@@ -1,0 +1,19 @@
+{
+    "name": "emerson/forms",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^9.4"
+    },
+    "authors": [
+        {
+            "name": "Emerson C. Lima",
+            "email": "elfcorreia@gmail.com"
+        }
+    ],
+    "autoload": {
+    	"psr-4": {
+    		"Forms\\": "src"
+    	}
+    },
+    "require": {}
+}
