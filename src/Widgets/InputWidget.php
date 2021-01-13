@@ -2,6 +2,8 @@
 
 namespace Forms\Widgets;
 
+use Forms\Widget;
+
 /**
  * @brief Base class for HTML input widgets
  */

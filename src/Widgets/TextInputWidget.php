@@ -2,6 +2,8 @@
 
 namespace Forms\Widgets;
 
+use Forms\Widget;
+
 /** 
  * @brief A html text input widget
  */
