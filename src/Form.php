@@ -74,7 +74,12 @@ abstract class Form {
     public function bound(array $values): bool {
         $this->bounded = true;
         foreach ($this->getFields() as $name => $field) {
+            $field->clearErrors();
             $field->bound(isset($values[$name]) ? $values[$name] : null);
+            $field->validate();
+            if ($field->isValid()) {
+                $this->cleanedData[$name] = $field->clean($field->getValue());
+            }
         }
         return true;
     }
@@ -88,19 +93,7 @@ abstract class Form {
         return true;
     }
     
-    private function clean() {
-        $this->cleanedData = [];
-        $this->clearErrors();
-        foreach ($this->getFields() as $name => $field) {
-            $field->clearErrors();
-            $field->validate();
-            if ($field->isValid()) {
-                $this->cleanedData[$name] = $field->clean($field->getValue());
-            }
-        }
-    }
-    
-    public function getCleanedData() {        
+    public function getCleanedData() {
         return $this->cleanedData;
     }
     
