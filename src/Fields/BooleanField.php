@@ -3,6 +3,8 @@
 namespace Forms\Fields;
 
 use Forms\Field;
+use Forms\Widget;
+use Forms\Widgets\CheckboxInputWidget;
 
 /**
  * @brief A Boolean field

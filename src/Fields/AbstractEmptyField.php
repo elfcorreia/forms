@@ -7,7 +7,7 @@ use Forms\Field;
 /**
  * @brief Base class for fields tha can have empty values
  */
-abstract class EmptyField extends Field {
+abstract class AbstractEmptyField extends Field {
     
     private $empty = '';
     private $emptyValue = null;

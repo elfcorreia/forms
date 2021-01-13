@@ -3,11 +3,12 @@
 namespace Forms\Fields;
 
 use Forms\Field;
-
+use Forms\Widget;
+use Forms\Widgets\SelectWidget;
 /** 
  * @brief An choice field 
  */
-class ChoiceField extends EmptyField {
+class ChoiceField extends AbstractEmptyField {
     
     private $choices = [];
     

@@ -3,11 +3,13 @@
 namespace Forms\Fields;
 
 use Forms\Field;
+use Forms\Widget;
+use Forms\DateTimeInputWidget;
 
 /**
  * @brief A timestamp field
  */
-class TimestampField extends EmptyField {
+class TimestampField extends AbstractEmptyField {
     
     public function __construct($opts) {
         parent::__construct($opts);

@@ -2,28 +2,14 @@
 
 namespace Forms\Fields;
 
-use Forms\Field;
-
 /**
  * @brief A slug field
  */
-class SlugField extends CharField {
-    
-    const REGEXP = '/[a-zA-Z_\-]+/'; //todo: fix this
-    
+class SlugField extends PregCharField {
+        
     public function __construct($opts) {
+        $opts['preg'] = '/[a-zA-Z_\-]+/'; //todo: fix this;
         parent::__construct($opts);
     }
-    
-    public function validate(): void {
-        parent::validate();
-        $valid = filter_var($this->getValue(), FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/[a-zA-Z_\-]+/']]);
-        if ($this->hasChanged() && !$valid) {
-            $this->addError('invalid');
-        }
-    }
-    
-    public function clean($value) {
-        return filter_var($this->getValue(), FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => self::REGEXP]]);
-    }
+
 }

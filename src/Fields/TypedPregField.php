@@ -5,7 +5,7 @@ namespace Forms\Fields;
 /**
  * @brief A TypedChoice field
  */
-class TypedChoiceField extends ChoiceField {
+class TypedChoiceField extends PregCharField {
     
     private $coerce = null;
     

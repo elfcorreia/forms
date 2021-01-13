@@ -3,12 +3,14 @@
 namespace Forms\Fields;
 
 use Forms\Field;
+use Forms\Widget;
+use Forms\Widgets\CheckboxInputWidget;
 
 /**
  * @brief A nullable boolean field.
  * never throws ValidationException
  */
-class NullBooleanField extends EmptyField {
+class NullBooleanField extends AbstrtactEmptyField {
     
     
     public function __construct($opts) {
