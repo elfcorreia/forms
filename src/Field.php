@@ -41,7 +41,8 @@ abstract class Field {
         $this->clearErrors();
         $this->bounded = true;
         $this->value = $value;
-        $this->validate();        
+        $this->validate();
+        return true;
     }
     
     public function clearErrors(): void {
