@@ -1,6 +1,6 @@
 <?php
 
-namespace Forms\Layout;
+namespace Forms\Layouts;
 
 use Forms\Layout;
 use Forms\Form;
