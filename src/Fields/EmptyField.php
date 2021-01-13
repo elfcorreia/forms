@@ -2,6 +2,8 @@
 
 namespace Forms\Fields;
 
+use Forms\Field;
+
 /**
  * @brief Base class for fields tha can have empty values
  */

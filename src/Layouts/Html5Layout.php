@@ -2,6 +2,9 @@
 
 namespace Forms\Layout;
 
+use Forms\Layout;
+use Forms\Form;
+
 class Html5Layout implements Layout {
 
     public function render(Form $form): string {

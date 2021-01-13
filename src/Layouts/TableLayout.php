@@ -2,6 +2,9 @@
 
 namespace Forms\Layout;
 
+use Forms\Layout;
+use Forms\Form;
+
 /**
  * @brief Renders a form in a HTML table
  */

@@ -2,6 +2,8 @@
 
 namespace Forms\Fields;
 
+use Forms\Field;
+
 /**
  * @brief A Boolean field
  *

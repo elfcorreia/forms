@@ -2,6 +2,8 @@
 
 namespace Forms\Fields;
 
+use Forms\Field;
+
 /**
  * @ An email field
  */

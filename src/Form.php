@@ -105,7 +105,7 @@ abstract class Form {
     }
     
     public function __toString(): string {
-       return '[Form object]';
+       return $this->html();
     }
     
     public function setInitial(array $data): void {
@@ -114,5 +114,12 @@ abstract class Form {
                 $this->$name->setInitial($value);
             }
         }
+    }
+
+    public function html(?Layout $layout = null): string {
+        if ($layout === null) {
+            $layout = new Layouts\Html5Layout();
+        }
+        return $layout->render($this);
     }
 }
